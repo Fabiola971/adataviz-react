@@ -4,10 +4,12 @@ import Cart from './components/Cart'
 import Filter from './components/Filter'
 import {results} from './datas.js'
 import { formatDatas } from './utils.js'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
     const formatEvents = results.map(formatDatas);
+    
   return (
     <>
       <Header/> 
@@ -22,10 +24,12 @@ function App() {
               description={event.description}
               adresse={event.adresse}
               prix={event.prix}
-              accèsPMR={event.accèsPMR}/>
+              accèsPMR={event.accèsPMR}
+              date={event.date}/>
             ))}  
         </section>
-      </main>      
+      </main>
+      <Footer/>      
     </>
   )
 }
