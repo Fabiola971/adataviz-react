@@ -1,14 +1,14 @@
+import {results} from "./datas.js"
 
-export const formatDatas = async () => {
-    const results = await main();
+export const formatDatas = (event) => {
+    // const results = await main();
     // Evenement, Description, Adresse, Prix, Accès PMR
     return{
-        Id:results.event_id,
-        Evenement: results.title,
-        Description: results.lead_text,
-        Adresse: results.address_street + results.address_zipcode + results.address_city,
-        Prix: results.price_type,
-        AccèsPMR: results.pmr
-    }
+        id:event.event_id,
+        evenement: event.title,
+        description: event.lead_text,
+        adresse: [event.address_street, results.address_zipcode, results.address_city].filter(Boolean).join(" "),
+        prix: event.price_type,
+        accèsPMR: event.pmr,
+    };
  }
-console.log(formatDatas())
