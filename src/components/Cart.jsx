@@ -1,4 +1,7 @@
-function Cart({evenement, description, adresse, prix, accèsPMR}){
+import { useState } from "react";
+
+function Cart({evenement, description, adresse, prix, accèsPMR, date}){
+    const [open, setOpen] = useState(false);
     return(
         <article className="box">
             <ul className="datas-container">
@@ -8,6 +11,10 @@ function Cart({evenement, description, adresse, prix, accèsPMR}){
                 <li><span>Prix: </span>{prix}</li>
                 <li><span>AccèsPMR: </span>{accèsPMR === 1 ? "oui" : "Non renseigné"}</li>
             </ul>
+            <div className="button-container">
+                <button type="button" onClick={() => setOpen(!open)}>{open ? "Hide Date" : "Save The Date"}</button>
+                {open && <p>{date === null ? " date à venir" : date}</p>}
+            </div>
         </article>
     )
 }
