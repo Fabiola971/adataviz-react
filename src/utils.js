@@ -5,6 +5,7 @@ export const formatDatas = (event) => {
     // Evenement, Description, Adresse, Prix, Accès PMR
     return{
         id:event.event_id,
+        date:event.date_start,
         evenement: event.title,
         description: event.lead_text,
         adresse: [event.address_street, results.address_zipcode, results.address_city].filter(Boolean).join(" "),
