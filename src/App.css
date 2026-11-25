@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Exile&family=Google+Sans+Flex:opsz,wght@1..144,1..1000&family=Monofett&family=Orbitron:wght@400..900&display=swap');
-
-
 
 *{
     margin: 0;
@@ -130,6 +127,21 @@ button{
     color: white;
     border: red 1px solid;
     padding: 10px;
+    cursor: pointer;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: larger;
+    
+}
+
+.button-container p{
+    font-size: 32px;
 }
 
 @container (min-width: 700px) {
