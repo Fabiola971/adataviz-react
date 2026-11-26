@@ -2,9 +2,9 @@ import Header from './components/Header'
 import Banner from './components/Banner'
 import Cart from './components/Cart'
 import Filter from './components/Filter'
+import Footer from './components/Footer'
 import {results} from './datas.js'
 import { formatDatas } from './utils.js'
-import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     
   return (
     <>
-      <Header/> 
+      <Header/>
       <Banner/>
       <main>
         <section id="box-container">
