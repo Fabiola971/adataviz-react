@@ -5,10 +5,10 @@ export const formatDatas = (event) => {
     // Evenement, Description, Adresse, Prix, Accès PMR
     return{
         id:event.event_id,
-        date:event.date_start,
+        date:event.date_description,
         evenement: event.title,
         description: event.lead_text,
-        adresse: [event.address_street, results.address_zipcode, results.address_city].filter(Boolean).join(" "),
+        adresse: [event.address_street, event.address_zipCode, event.address_city].join(" "),
         prix: event.price_type,
         accèsPMR: event.pmr,
     };
