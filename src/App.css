@@ -15,6 +15,7 @@ h1{
 
 header{
     border-bottom: #104b82 1px solid;
+    font-family: "Orbitron", sans-serif;
 }
 
 header,main, footer{
@@ -35,6 +36,10 @@ ul{
   width: 60px;
 }
 
+.nav-links label, .nav-links span{
+    font-size: xx-small;
+}
+
 .nav-links li:last-of-type{
     width: 50%;
     margin-left: auto;
@@ -42,6 +47,7 @@ ul{
 
 .nav-links #input-search{
     width: 100%;
+    margin-block: 5px;
 }
 
 footer{
@@ -166,6 +172,10 @@ button{
 
     .btn-container{
         flex-direction: row;
+    }
+
+    .nav-links label, .nav-links span{
+        font-size: medium;
     }
 }
 
